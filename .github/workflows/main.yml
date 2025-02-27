@@ -19,5 +19,7 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
 
-    - name: Deploy static site to ec2 instance
-      run: aws s3 sync . s3://portfolioashik
+    name: Deploy static site to EC2 instance
+      run: scp -r . ec2-user@35.173.125.107:/var/www/html
+
+
