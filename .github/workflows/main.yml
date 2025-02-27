@@ -19,7 +19,4 @@ jobs:
           aws-region: us-east-1
 
       - name: Deploy static site to EC2 instance
-        run: scp -r . ec2-user@35.173.125.107:/var/www/html
-
-
-
+        run: scp -o StrictHostKeyChecking=no -r . ec2-user@35.173.125.107:/var/www/html
